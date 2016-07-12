@@ -15,7 +15,7 @@ CREATE TABLE `forum_topic`
   `locked` TINYINT(1) NOT NULL default '0',
   `sticky` TINYINT(1) NOT NULL default '0',
   PRIMARY KEY  (`id`)
-) TYPE=MyISAM ;
+) ENGINE=MyISAM ;
 
 /******************************/
 /*	 表名：forum_reply		  */
@@ -32,7 +32,7 @@ CREATE TABLE `forum_reply`
   `reply_datetime` DATETIME NOT NULL default '0000-00-00 00:00:00',
   PRIMARY KEY  (`id`),
   KEY `a_id` (`reply_id`)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 /***************************/
 /*	 表名：forum_user      */
@@ -47,7 +47,7 @@ CREATE TABLE `forum_user`
   `realname` VARCHAR(50) NOT NULL,
   `regdate` DATETIME NOT NULL default '0000-00-00 00:00:00',
   PRIMARY KEY  (`id`)
-) TYPE=MyISAM ;
+) ENGINE=MyISAM ;
 
 
 /*
